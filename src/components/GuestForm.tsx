@@ -49,7 +49,7 @@ function GuestForm({ onNewGuest }: GuestFormProps) {
         <>
             <form 
                 onSubmit={handleSubmit} 
-                className="max-w-md w-full bg-white p-6 rounded-lg shadow-lg space-y-4"
+                className="max-w-md w-full bg-white bg-opacity-10 p-6 rounded-lg shadow-lg space-y-4"
             >
                 <h1 className="text-2xl font-bold text-center">Buku Tamu Pernikahan</h1>
 
