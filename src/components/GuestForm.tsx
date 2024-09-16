@@ -71,7 +71,7 @@ function GuestForm({ onNewGuest }: GuestFormProps) {
                     <label className="label">
                         <span className="label-text">Ucapan & Doa</span>
                     </label>
-                    <textarea 
+                    <textarea
                         value={message} 
                         onChange={(e) => setMessage(e.target.value)} 
                         placeholder="Tulis ucapan & doa Anda di sini" 
