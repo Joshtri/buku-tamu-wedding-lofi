@@ -58,7 +58,12 @@ const GuestList: React.FC = () => {
   const indexOfFirstGuest = indexOfLastGuest - itemsPerPage;
   const currentGuests = guests.slice(indexOfFirstGuest, indexOfLastGuest);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return (
+    <div className="flex justify-center items-center h-64">
+      <div className="spinner"></div>
+    </div>
+  );
+  
   if (error) return <p>{error}</p>;
 
   return (
