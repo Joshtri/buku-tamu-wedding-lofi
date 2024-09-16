@@ -19,10 +19,19 @@ const GuestList: React.FC = () => {
     const fetchGuests = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/guests`);
-        setGuests(response.data);
+        
+        // Log the response data to verify it's an array
+        console.log(response.data);
+
+        // Check if response.data is an array
+        if (Array.isArray(response.data)) {
+          setGuests(response.data);
+        } else {
+          setError('Invalid data format received from the API.');
+        }
       } catch (error) {
         setError('Failed to fetch guests.');
-        console.log(error);
+        console.error(error);
       } finally {
         setLoading(false);
       }

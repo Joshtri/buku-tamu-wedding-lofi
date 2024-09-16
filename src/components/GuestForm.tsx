@@ -10,7 +10,7 @@ interface GuestFormProps {
 function GuestForm({ onNewGuest }: GuestFormProps) {
     const [name, setName] = useState<string>('');
     const [message, setMessage] = useState<string>('');
-    const [numberOfGuests, setNumberOfGuests] = useState<number>(); // Default to 1 guest
+    const [numberOfGuests, setNumberOfGuests] = useState<number>(1); // Default to 1 guest
     const [loading, setLoading] = useState<boolean>(false); // Loading state
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -49,7 +49,7 @@ function GuestForm({ onNewGuest }: GuestFormProps) {
         <>
             <form 
                 onSubmit={handleSubmit} 
-                className="max-w-md w-full bg-white bg-opacity-10 p-6 rounded-lg shadow-lg space-y-4"
+                className="max-w-md w-full bg-white p-6 rounded-lg shadow-lg space-y-4"
             >
                 <h1 className="text-2xl font-bold text-center">Buku Tamu Pernikahan</h1>
 
