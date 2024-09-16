@@ -21,7 +21,7 @@ const GuestList: React.FC = () => {
         const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/guests`);
         
         // Log the response data to verify it's an array
-        console.log(response.data);
+        // console.log(response.data);
 
         // Check if response.data is an array
         if (Array.isArray(response.data)) {
